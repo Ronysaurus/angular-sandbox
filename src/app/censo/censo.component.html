@@ -1,19 +1,37 @@
-<mat-toolbar color="primary">
+<!--toolbar-->
+<mat-toolbar color="withe">
   <mat-button-toggle-group name="filtro" aria-label="filtro">
     <span class="filler">
-      <mat-button-toggle value="Todos">Todos</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Todos">Todos</mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle value="Hospitalizados">Hospitalizados</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Hospitalizados">Hospitalizados</mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle value="Ambulatorios ">Ambulatorios </mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Ambulatorios ">Ambulatorios </mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle value="Imagen/Laboratorio">Imagen/Laboratorio</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Imagen/Laboratorio">Imagen/Laboratorio</mat-button-toggle>
     </span>
   </mat-button-toggle-group>
-  <span class="filler">
+  <span class="example-spacer">
     <mat-slide-toggle>Ver solo Areas</mat-slide-toggle>
   </span>
 </mat-toolbar>
+<!--End toolbar-->
+<!--acordeon-->
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Self aware panel
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <span><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></span>
+    <span><mat-card>Simple card</mat-card></span>
+  </mat-expansion-panel>
+</mat-accordion>
+<!--End acordeon-->

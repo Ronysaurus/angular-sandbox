@@ -10,7 +10,6 @@ export class CensoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() 
-  {
+  ngOnInit() {
   }
 }
