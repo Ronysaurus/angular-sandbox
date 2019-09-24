@@ -14,24 +14,49 @@
       <mat-button-toggle class="filter-btn" value="Imagen/Laboratorio">Imagen/Laboratorio</mat-button-toggle>
     </span>
   </mat-button-toggle-group>
+
   <span class="example-spacer">
-    <mat-slide-toggle>Ver solo Areas</mat-slide-toggle>
+    <mat-slide-toggle class="filter-toggle" (change)="expand()">Ver solo Areas</mat-slide-toggle>
   </span>
 </mat-toolbar>
+
 <!--End toolbar-->
-<!--acordeon-->
-<mat-accordion>
-  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Self aware panel
-      </mat-panel-title>
-      <mat-panel-description>
-        Currently I am {{panelOpenState ? 'open' : 'closed'}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <span><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></span>
-    <span><mat-card>Simple card</mat-card></span>
-  </mat-expansion-panel>
-</mat-accordion>
-<!--End acordeon-->
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Self aware panel
+    </mat-panel-title>
+    <mat-panel-description>
+      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span>
+    <mat-card>Simple card</mat-card>
+  </span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Self aware panel
+    </mat-panel-title>
+    <mat-panel-description>
+      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span>
+    <mat-card>Simple card</mat-card>
+  </span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Self aware panel
+    </mat-panel-title>
+    <mat-panel-description>
+      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span>
+    <mat-card>Simple card</mat-card>
+  </span>
+</mat-expansion-panel>

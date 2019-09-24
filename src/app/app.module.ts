@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {MatTabsModule} from '@angular/material/tabs'; 
 import { MatExpansionModule } from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
@@ -25,10 +26,11 @@ import 'hammerjs';
     MatSlideToggleModule,
     MatButtonToggleModule,
     MatExpansionModule,
+    MatTabsModule,
     MatIconModule,
     MatCardModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

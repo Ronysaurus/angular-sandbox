@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 
 export class CensoComponent implements OnInit {
 
+  panelOpenState: boolean = false;
+  allExpandState = true;
   constructor() { }
+
+  expand()
+  {
+    this.allExpandState = !this.allExpandState;
+  }
 
   ngOnInit() {
   }
