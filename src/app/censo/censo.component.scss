@@ -12,8 +12,34 @@
   color: gray;
 }
 
-.mat-button-toggle-checked
-{
-    color: turquoise;
+.mat-button-toggle-checked {
+  color: turquoise;
 }
-    
+
+.paciente-icon {
+  height: 80%;
+  width: 10%;
+  flex-grow: 0;
+  display: inline-block;
+}
+
+.paciente-info {
+  height: 80%;
+  min-width: 90%;
+  flex-grow: 100;
+  display: inline-block;
+
+  .info-left {
+    height: 80%;
+    width: 50%;
+    flex-grow: 0;
+    display: inline-block;
+  }
+
+  .info-right {
+    height: 80%;
+    min-width: 50%;
+    flex-grow: 100;
+    display: inline-block;
+  }
+}

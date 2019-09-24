@@ -24,39 +24,33 @@
 <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      Self aware panel
+      Area
     </mat-panel-title>
-    <mat-panel-description>
-      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+    <mat-panel-description style="margin-left:auto; margin-right:0;">
+      Pacientes
     </mat-panel-description>
   </mat-expansion-panel-header>
-  <span>
-    <mat-card>Simple card</mat-card>
-  </span>
-</mat-expansion-panel>
-<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Self aware panel
-    </mat-panel-title>
-    <mat-panel-description>
-      Currently I am {{panelOpenState ? 'open' : 'closed'}}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <span>
-    <mat-card>Simple card</mat-card>
-  </span>
-</mat-expansion-panel>
-<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Self aware panel
-    </mat-panel-title>
-    <mat-panel-description>
-      Currently I am {{panelOpenState ? 'open' : 'closed'}}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <span>
-    <mat-card>Simple card</mat-card>
-  </span>
-</mat-expansion-panel>
+  <div class="container">
+    <div class="paciente-icon">
+      imagen cool
+    </div>
+    <div class="paciente-info">
+      <mat-card>
+        <div class="container">
+          <div class="info-left">
+            Nombre <br>
+            <b>seguro</b> <br>
+            area <br>
+            Medico: <br>
+            Motivo de Ingreso: <br>
+          </div>
+          <div class="info-right">
+            Edad <br>
+            Ubicación Actual: <br>
+            Fecha Ingreso <br>
+            Estancia <br>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
