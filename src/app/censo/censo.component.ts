@@ -8,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class CensoComponent implements OnInit {
 
+  areas = ['Area1', 'Area2', 'Area3'];
+  pacientes: string[][] = [["paciente1", "paciente2"], ["paciente3"], ["paciente4", "paciente5", "paciente6"]];
   panelOpenState: boolean = false;
   allExpandState = true;
   constructor() { }
 
-  expand()
-  {
+  expand() {
     this.allExpandState = !this.allExpandState;
   }
 

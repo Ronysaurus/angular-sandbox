@@ -1,17 +1,16 @@
-<!--toolbar-->
 <mat-toolbar color="withe">
   <mat-button-toggle-group name="filtro" aria-label="filtro">
     <span class="filler">
-      <mat-button-toggle class="filter-btn" value="Todos">Todos</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Todos">Todos()</mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle class="filter-btn" value="Hospitalizados">Hospitalizados</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Hospitalizados">Hospitalizados()</mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle class="filter-btn" value="Ambulatorios ">Ambulatorios </mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Ambulatorios ">Ambulatorios() </mat-button-toggle>
     </span>
     <span class="filler">
-      <mat-button-toggle class="filter-btn" value="Imagen/Laboratorio">Imagen/Laboratorio</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Imagen/Laboratorio">Imagen/Laboratorio()</mat-button-toggle>
     </span>
   </mat-button-toggle-group>
 
@@ -20,37 +19,39 @@
   </span>
 </mat-toolbar>
 
-<!--End toolbar-->
-<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Area
-    </mat-panel-title>
-    <mat-panel-description style="margin-left:auto; margin-right:0;">
-      Pacientes
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <div class="container">
-    <div class="paciente-icon">
-      imagen cool
-    </div>
-    <div class="paciente-info">
-      <mat-card>
-        <div class="container">
-          <div class="info-left">
-            Nombre <br>
-            <b>seguro</b> <br>
-            area <br>
-            Medico: <br>
-            Motivo de Ingreso: <br>
+<div *ngFor="let area of areas; let i = index">
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [expanded]="allExpandState">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{area}}
+      </mat-panel-title>
+      <mat-panel-description style="margin-left:auto; margin-right:0;">
+        Pacientes
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="container" *ngFor="let paciente of pacientes[i]">
+      <div class="paciente-icon">
+        imagen cool
+      </div>
+      <div class="paciente-info">
+        <mat-card>
+          <div class="container">
+            <div class="info-left">
+              {{paciente}} <br>
+              <b>seguro</b> <br>
+              area <br>
+              Medico: <br>
+              Motivo de Ingreso: <br>
+            </div>
+            <div class="info-right">
+              Edad <br>
+              Ubicación Actual: <br>
+              Fecha Ingreso <br>
+              Estancia <br>
+            </div>
           </div>
-          <div class="info-right">
-            Edad <br>
-            Ubicación Actual: <br>
-            Fecha Ingreso <br>
-            Estancia <br>
-          </div>
-        </div>
-      </mat-card>
+        </mat-card>
+      </div>
     </div>
-  </div>
+  </mat-expansion-panel>
+</div>
