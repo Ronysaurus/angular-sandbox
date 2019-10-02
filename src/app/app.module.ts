@@ -8,6 +8,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { PacienteInfoService } from './censo/paciente-info.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +33,8 @@ import 'hammerjs';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [PacienteInfoService,
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

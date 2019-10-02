@@ -1,7 +1,7 @@
 <mat-toolbar color="withe">
   <mat-button-toggle-group name="filtro" aria-label="filtro">
     <span class="filler">
-      <mat-button-toggle class="filter-btn" value="Todos">Todos()</mat-button-toggle>
+      <mat-button-toggle class="filter-btn" value="Todos">Todos({{numPacientes[0]}})</mat-button-toggle>
     </span>
     <span class="filler">
       <mat-button-toggle class="filter-btn" value="Hospitalizados">Hospitalizados()</mat-button-toggle>
@@ -26,7 +26,7 @@
         {{area}}
       </mat-panel-title>
       <mat-panel-description style="margin-left:auto; margin-right:0;">
-        Pacientes
+        {{numPacientes[i+1]}} Pacientes
       </mat-panel-description>
     </mat-expansion-panel-header>
     <div class="container" *ngFor="let paciente of pacientes[i]">
@@ -37,17 +37,17 @@
         <mat-card>
           <div class="container">
             <div class="info-left">
-              {{paciente}} <br>
-              <b>seguro</b> <br>
-              area <br>
-              Medico: <br>
-              Motivo de Ingreso: <br>
+              <p style="font-size: 16px;">#{{paciente.id}}-{{paciente.fullname}} </p>
+              <b>{{paciente.servicioMedico}}</b> <br>
+              Area: {{paciente.area}} Habitacion: {{paciente.habitacion}}<br>
+              Médico: {{paciente.medico}} <br>
+              Motivo de Ingreso: {{paciente.motivo}}<br>
             </div>
             <div class="info-right">
-              Edad <br>
-              Ubicación Actual: <br>
-              Fecha Ingreso <br>
-              Estancia <br>
+              {{paciente.edad}} años, del {{paciente.nacimiento}} <br>
+              Ubicación Actual: {{paciente.ubicacion}}<br>
+              Fecha Ingreso {{paciente.ingreso}}<br>
+              Estancia de {{paciente.estancia}} <br>
             </div>
           </div>
         </mat-card>
